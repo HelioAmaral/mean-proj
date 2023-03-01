@@ -1,1 +1,19 @@
-<p>post-create works!</p>
+<!--using ngModel allows 2 way binding, meaning the value the user puts in the text area is available to use, we binded it to a property (addedValue) created in the class. Then using the newPost variable and string interpolation, we change the newPost to be equal to addedValue and with string interpolation will show that same value within the paragraph-->
+<mat-card>
+  <mat-form-field>
+    <textarea matInput rows="6" [(ngModel)]="addedValue"></textarea>
+  </mat-form-field>
+<hr />
+    <button mat-raised-button color="accent" (click)="onAddPost()">Save Post</button>
+</mat-card>
+<p>{{ newPost }}</p>
+
+
+
+
+
+
+
+  
+
+

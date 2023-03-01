@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-post-create',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class PostCreateComponent {
 
+  //property to bind ngModule (2 way binding)
+  addedValue = '';
+
+  //property that will store the new post value
+  newPost = '';
+
+  //method that is called once the button is clicked
+  onAddPost(){
+    this.newPost = this.addedValue;
+  }
 }
